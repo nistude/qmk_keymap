@@ -77,29 +77,11 @@ enum custom_keycodes {
 #define VOL_UP     KC_VOLU
 #define VOL_DOWN   KC_VOLD
 
-#include "os-detection.c"
+#include "combos.c"
+#include "key-overrides.c"
 #include "magic-repeat.c"
+#include "os-detection.c"
 #include "tap-hold.c"
-
-/*
- * Combos (https://docs.qmk.fm/features/combo)
- */
-const uint16_t PROGMEM e_u_combo[] = {E_ALT, LNGR_U, COMBO_END};
-const uint16_t PROGMEM e_p_combo[] = {E_ALT, KC_P, COMBO_END};
-
-combo_t key_combos[] = {
-    COMBO(e_u_combo, M_E_GRAVE),
-    COMBO(e_p_combo, M_E_ACUTE),
-};
-
-/*
- * Key Overrides / Custom Shift (https://docs.qmk.fm/features/key_overrides)
- */
-const key_override_t shft_bspc_del_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
-
-const key_override_t *key_overrides[] = {
-    &shft_bspc_del_override,
-};
 
 /*
  * User callbacks
