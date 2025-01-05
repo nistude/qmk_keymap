@@ -7,7 +7,11 @@ enum layers {
 };
 
 enum custom_keycodes {
-    M_AND = SAFE_RANGE,
+    TAB_ADDR = SAFE_RANGE,
+    TAB_FIND,
+    TAB_NEW,
+    // Macros
+    M_AND,
     M_BRACKETS,
     M_CURLY_BRACES,
     M_CODEB,
@@ -19,9 +23,6 @@ enum custom_keycodes {
     M_SCH,
     M_THE,
     M_YOU,
-    TAB_ADDR,
-    TAB_FIND,
-    TAB_NEW,
 };
 
 // simplified tap - hold actions / linger keys
@@ -75,3 +76,14 @@ enum custom_keycodes {
 
 #define VOL_UP      KC_VOLU
 #define VOL_DOWN    KC_VOLD
+
+/*
+ * Combos (https://docs.qmk.fm/features/combo)
+ */
+const uint16_t PROGMEM e_u_combo[] = {KC_E, LNGR_U, COMBO_END};
+const uint16_t PROGMEM e_p_combo[] = {KC_E, KC_P, COMBO_END};
+
+combo_t key_combos[] = {
+    COMBO(e_u_combo, M_E_GRAVE),
+    COMBO(e_p_combo, M_E_ACUTE),
+};
