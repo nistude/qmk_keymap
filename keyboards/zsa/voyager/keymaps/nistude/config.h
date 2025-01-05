@@ -1,10 +1,13 @@
-#pragma once
+/*
+  Set any config.h overrides for your specific keymap here.
+  See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
+*/
 
 // Unfortunately, some applications drop or misorder fast key events. This is a
 // partial fix to slow down the rate at which macros are sent.
 #define TAP_CODE_DELAY 5
 
-// Tap-hold configuration for home row mods.
+// Tap-hold configuration
 #define TAPPING_TERM 170
 #define TAPPING_TERM_PER_KEY
 #define PERMISSIVE_HOLD
