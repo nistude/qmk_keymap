@@ -1,11 +1,6 @@
-enum layers {
-    BASE_0,
-    BASE_1,
-    NAV,
-    NUM,
-    SYM,
-};
-
+/*
+ * Custom keycodes for my Voyager
+ */
 enum custom_keycodes {
     TAB_ADDR = SAFE_RANGE,
     TAB_FIND,
@@ -77,6 +72,9 @@ enum custom_keycodes {
 #define VOL_UP     KC_VOLU
 #define VOL_DOWN   KC_VOLD
 
+/*
+ * Feature configuration
+ */
 #include "caps-word.c"
 #include "combos.c"
 #include "key-overrides.c"
@@ -86,7 +84,7 @@ enum custom_keycodes {
 #include "tap-hold.c"
 
 /*
- * User callbacks
+ * Process custom keycodes
  */
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef CONSOLE_ENABLE

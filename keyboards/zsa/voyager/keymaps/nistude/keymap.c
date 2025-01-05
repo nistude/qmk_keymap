@@ -4,8 +4,17 @@
 
 #include QMK_KEYBOARD_H
 
+enum layers {
+    BASE_0,
+    BASE_1,
+    NAV,
+    NUM,
+    SYM,
+};
+
 #include "nistude.c"
 
+// clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BASE_0] = LAYOUT(
         KC_ESC,  _______, SPTLGHT,  GUI_NAV, _______,   _______,            L_BASE1,  L_NAV,  COMPOSE,    _______,  _______,    KC_PSCR,
