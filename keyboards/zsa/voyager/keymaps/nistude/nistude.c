@@ -77,6 +77,7 @@ enum custom_keycodes {
 #define VOL_UP     KC_VOLU
 #define VOL_DOWN   KC_VOLD
 
+#include "caps-word.c"
 #include "combos.c"
 #include "key-overrides.c"
 #include "magic-repeat.c"
