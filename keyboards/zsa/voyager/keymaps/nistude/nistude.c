@@ -82,6 +82,7 @@ enum custom_keycodes {
 #include "key-overrides.c"
 #include "magic-repeat.c"
 #include "os-detection.c"
+#include "rgb-matrix.c"
 #include "tap-hold.c"
 
 /*
